@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demander un service</title>
+
+	<style type="text/css">
+		.box{
+			margin: 10px;
+			padding: 10px;
+			border: 1px solid black;
+		}
+	</style>
+
+</head>
+<body>
+	<div name="Mandataire" class="box">
+		<h1>Mandataire</h1>
+		<div name="addMandataire" class="box">
+			<h2>addMandataire</h2>
+			<p>
+				<label for="nameManda">Name : </label><input type="text" id="nameAddManda"><br/>
+				<label for="cityManda">City : </label><input type="text" id="cityAddManda"><br/>
+				<input type="button" name="addMandataireButton" value="Send" onclick="App.addMandataire();">
+			</p>
+		</div>
+		<div name="askService" class="box">
+			<h2>askService</h2>
+			<p>
+				<label for="prestaId">Prestataire Id : </label><input type="text" id="prestaIdAsk"><br/>
+				<label for="serviceType">Type of service : </label><input type="text" id="serviceTypeAsk"><br/>
+				<label for="price">Price : </label><input type="text" id="priceAsk"><br/>
+				<label for="depositPercentage">Deposit percentage : </label><input type="text" id="depositPercentageAsk"><br/>
+				<input type="button" name="askServiceBtn"  onclick="App.askService();" value="Send">
+			</p>
+		</div>
+		<div name="payDeposit" class="box">
+			<h2>payDeposit</h2>
+			<p>
+				<label for="serviceId">Service Id : </label><input type="text" id="serviceIdDeposit"><br/>
+        <label for="amountPay">Amount to Pay : </label><input type="number" id="amountDeposit"><br/>
+				<input type="button" name="payDepositBtn" value="Send" onclick="App.payDeposit();">
+			</p>
+		</div>
+		<div name="payFinalPrice" class="box">
+			<h2>payFinalPrice</h2>
+			<p>
+				<label for="serviceId">Service Id : </label><input type="text" id="serviceIdFinalPrice"><br/>
+        <label for="amountPay">Amount to Pay : </label><input type="number" id="amountFinalPrice"><br/>
+				<input type="button" name="payFinalPriceBtn" value="Send" onclick="App.payFinalPrice();">
+			</p>
+		</div>
+		<div name="seePresta" class="box">
+			<button type="button" name="seePrestataires" value="See Prestataires" onclick="App.seePrestataire();">See Prestataires</button>
+		</div>
+	</div>
+	<div name="Prestataire" class="box">
+		<h1>Prestataire</h1>
+		<div name="acceptService" class="box">
+			<h2>acceptService</h2>
+			<p>
+				<label>Service Id : </label>
+				<input type="text" id="serviceIdAccept">
+				<input type="button" name="acceptServiceBtn" value="Send" onclick="App.acceptService();">
+			</p>
+		</div>
+		<div name="addPrestataire" class="box">
+			<h2>addPrestataire</h2>
+			<p>
+				<label for="namePresta">Name : </label><input type="text" id="nameAddPresta"><br/>
+				<label for="cityPresta">City : </label><input type="text" id="cityAddPresta"><br/>
+				<label for="rolePresta">Role : </label><input type="text" id="roleAddPresta"><br/>
+				<button type="button" name="addPrestataireBtn" value="Send" onclick="App.addPrestataire();"> Send </button>
+			</p>
+		</div>
+		<div name="executeService" class="box">
+			<h2>executeService</h2>
+			<p>
+				<label for="serviceId">Service Id : </label><input type="text" id="serviceIdExecute"><br/>
+				<input type="button" name="executeServiceBtn" value="Send" onclick="App.executeService();">
+			</p>
+		</div>
+		<div name="withdraw" class="box">
+			<input type="button" name="Withdraw" value="Withdraw" onclick="App.withdraw();">
+		</div>
+	</div>
+  <div name="Services" class="box">
+    <h1>Services</h1>
+    <div class="box">
+			<button type="button" name="seeServices" value="See Prestataires" onclick="App.seeServices();">See Services</button>
+		</div>
+
+    <div class="box">
+			<button type="button" name="seeMyServices" value="See Prestataires" onclick="App.seeMyServices();">See My Services</button>
+		</div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
